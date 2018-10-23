@@ -1,10 +1,10 @@
 <?php
 
-namespace XRA\Forum\Requests\ForumTopic;
+namespace XRA\Forum\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreForumPost extends FormRequest{
+class StoreForumCat extends FormRequest{
 	/**
 	 * Determine if the user is authorized to make this request.
 	 *
