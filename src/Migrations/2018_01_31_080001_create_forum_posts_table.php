@@ -18,13 +18,13 @@ class CreateForumPostsTable extends Migration {
 			Schema::create($this->getTable(), function (Blueprint $table) {
 				$table->increments('post_id');
 
-				$table->string('created_by');
-				$table->string('updated_by');
-				$table->string('deleted_by');
+				$table->string('created_by')->nullable();
+				$table->string('updated_by')->nullable();
+				$table->string('deleted_by')->nullable();
 
-				$table->ipAddress('created_ip');
-				$table->ipAddress('updated_ip');
-				$table->ipAddress('deleted_ip'); //$table->ipAddress('visitor');	IP address equivalent column.
+				$table->ipAddress('created_ip')->nullable();
+				$table->ipAddress('updated_ip')->nullable();
+				$table->ipAddress('deleted_ip')->nullable(); //$table->ipAddress('visitor');	IP address equivalent column.
 				
 				$table->timestamps();
 				$table->softDeletes();
