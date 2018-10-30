@@ -6,7 +6,7 @@ use App\User;
 use App\Post;
 */
 use XRA\LU\Models\User;
-use XRA\Forum\Models\ForumCat as Post;
+use XRA\Forum\Models\ForumItem as Post;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class ForumItemPolicy{
