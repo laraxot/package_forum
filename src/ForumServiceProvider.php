@@ -1,4 +1,7 @@
 <?php
+
+
+
 namespace XRA\Forum;
 
 use Illuminate\Support\ServiceProvider;
