@@ -35,6 +35,8 @@ class ForumTopic extends Model
     {
         $pivot = with(new PostRelated())->getTable();
 
-        return $this->morphToMany(ForumPost::class, 'related', $pivot, 'post_id', 'related_id');
+        //return $this->morphToMany(ForumPost::class, 'related', $pivot, 'post_id', 'related_id');
+        return $this->morphRelated(ForumPost::class);
+
     }
 }

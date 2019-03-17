@@ -33,8 +33,9 @@ class ForumItem extends Model
     //---- relationship ---
     public function forumTopics()
     {
-        $pivot = with(new PostRelated())->getTable();
+        //$pivot = with(new PostRelated())->getTable();
 
-        return $this->morphToMany(ForumTopic::class, 'related', $pivot, 'post_id', 'related_id');
+        //return $this->morphToMany(ForumTopic::class, 'related', $pivot, 'post_id', 'related_id');
+        return $this->morphRelated(ForumTopic::class);
     }
 }

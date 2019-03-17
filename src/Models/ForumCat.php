@@ -33,8 +33,9 @@ class ForumCat extends Model
     //---- relationship ---
     public function forumItems()
     {
-        $pivot = with(new PostRelated())->getTable();
+        //$pivot = with(new PostRelated())->getTable();
 
-        return $this->morphToMany(ForumItem::class, 'related', $pivot, 'post_id', 'related_id');
+        //return $this->morphToMany(ForumItem::class, 'related', $pivot, 'post_id', 'related_id');
+        return $this->morphRelated(ForumItem::class);
     }
 }
