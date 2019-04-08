@@ -1,7 +1,4 @@
 <?php
-
-
-
 namespace XRA\Forum\Models;
 
 use Illuminate\Database\Eloquent\Model;
