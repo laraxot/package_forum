@@ -1,7 +1,4 @@
 <?php
-
-
-
 namespace XRA\Forum\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -31,11 +28,7 @@ class ForumItem extends Model
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     //---- relationship ---
-    public function forumTopics()
-    {
-        //$pivot = with(new PostRelated())->getTable();
-
-        //return $this->morphToMany(ForumTopic::class, 'related', $pivot, 'post_id', 'related_id');
+    public function forumTopics(){
         return $this->morphRelated(ForumTopic::class);
     }
 }
