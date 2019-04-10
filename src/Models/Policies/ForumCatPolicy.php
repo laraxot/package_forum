@@ -1,18 +1,10 @@
 <?php
-
-
-
-namespace XRA\Forum\Policies;
-
-/*
-use App\User;
-use App\Post;
-*/
+namespace XRA\Forum\Models\Policies;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use XRA\Forum\Models\ForumTopic as Post;
+use XRA\Forum\Models\ForumCat as Post;
 use XRA\LU\Models\User;
 
-class ForumTopicPolicy
+class ForumCatPolicy
 {
     use HandlesAuthorization;
 
@@ -36,6 +28,14 @@ class ForumTopicPolicy
     }
 
     public function edit(User $user, Post $post)
+    {
+        if ($post->created_by == $user->handle) {
+            return true;
+        }
+
+        return false;
+    }
+    public function update(User $user, Post $post)
     {
         if ($post->created_by == $user->handle) {
             return true;

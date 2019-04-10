@@ -1,8 +1,5 @@
 <?php
-
-
-
-namespace XRA\Forum\Policies;
+namespace XRA\Forum\Models\Policies;
 
 /*
 use App\User;

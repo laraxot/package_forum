@@ -1,18 +1,15 @@
 <?php
-
-
-
-namespace XRA\Forum\Policies;
+namespace XRA\Forum\Models\Policies;
 
 /*
 use App\User;
 use App\Post;
 */
 use Illuminate\Auth\Access\HandlesAuthorization;
-use XRA\Forum\Models\ForumCat as Post;
+use XRA\Forum\Models\ForumItem as Post;
 use XRA\LU\Models\User;
 
-class ForumCatPolicy
+class ForumItemPolicy
 {
     use HandlesAuthorization;
 
