@@ -1,17 +1,17 @@
 <?php
-
-
-
 namespace XRA\Forum;
 
 use Illuminate\Support\ServiceProvider;
+
+use XRA\Extend\BaseServiceProvider;
+
 use XRA\Extend\Traits\ServiceProviderTrait;
 
 //-------models-----------
 //use XRA\Blog\Models\Post;
-class ForumServiceProvider extends ServiceProvider
+class ForumServiceProvider extends BaseServiceProvider
 {
-    use ServiceProviderTrait;
+    //use ServiceProviderTrait;
 
     //-----------------------------------------------
 }//end class
