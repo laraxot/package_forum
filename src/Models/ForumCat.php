@@ -35,4 +35,9 @@ class ForumCat extends Model
         //return $this->morphToMany(ForumItem::class, 'related', $pivot, 'post_id', 'related_id');
         return $this->morphRelated(ForumItem::class);
     }
+
+    //----- functions ---
+    public function forumItemModel(){
+        return $this->forumItems()->create();
+    }
 }
